@@ -197,7 +197,7 @@ int main(int argc, char* argv[]) {
             continue;
         }
 
-        std::string_view ip = inet_ntoa(tcpIP.ip.ip_dst);
+        std::string_view ip = inet_ntoa(tcpIP.ip.ip_src);
         std::cout << now() << "new packet, size: " << received << ", from: " << ip << ":" << tcpIP.tcp.source << std::endl;
 
         if (tcpIP.tcp.syn) {

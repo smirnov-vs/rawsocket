@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  rawsocket:
+    image: 'rawsocket:1.0'
+    build: .
+    command: 50000 5
+    ports:
+      - '50000:50000'
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
